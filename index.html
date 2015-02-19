@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Liubomyr Mykhalchenko</title>
+    <!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css" media="screen">
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
+    canvas {
+        display: block;
+        vertical-align: bottom;
+    }
+    #particles-js {
+        height: 100%;
+        background: #4CAF50
+    }
+    body {
+        font-family: "Lucida Grande", Verdana, sans-serif;
+        font-size: 12px;
+        letter-spacing: 3px;
+        line-height: 18px;
+    }
+    p.links,
+    a {
+        cursor: default;
+        text-align: center;
+        color: #39c;
+        text-decoration: none;
+        transition: color 0.1s;
+        margin-top: 50px;
+    }
+    a:hover,
+    a:focus {
+        color: #222;
+        outline: none;
+    }
+    /*::selection {
+        background: #000;
+        color: #ddd;
+    }
+    */
+    
+    .panel {
+        font-family: 'Source Sans Pro';
+        position: absolute;
+        z-index: 10;
+        width: 400px;
+        height: 180px;
+        background: #eee;
+        top: 50%;
+        left: 50%;
+        margin: -90px 0 0 -200px;
+        padding: 20px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    h1,
+    h2 {
+        font-size: 1.8em;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #222;
+    }
+    h2 {
+        font-weight: 400;
+        font-size: 1.4em;
+    }
+    .avatar {
+        background-image: url('./avatar.jpg');
+width: 180px;
+height: 180px;
+position: absolute;
+border-radius: 100px;
+border: 4px solid white;
+left: 50%;
+top: 50%;
+margin: -300px 0 0 -90px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="avatar"></div>
+    <div class="panel">
+        <h1>Liubomyr Mykhalchenko</h1>
+        <h2>Front-end developer</h2>
+
+        <p class="links">
+            <a href="http://ua.linkedin.com/in/liubko">linkedin</a> &middot;
+            <a href="http://github.com/liubko">github</a> &middot;
+            <a href="https://www.facebook.com/liubkomykh">facebook</a>
+        </p>
+    </div>
+    <div id="particles-js"></div>
+
+    <script src="http://vincentgarreau.com/particles.js/particles.js"></script>
+    <script>
+    particlesJS('particles-js', {
+        particles: {
+            color: '#fff',
+            color_random: false,
+            shape: 'circle', // "circle", "edge" or "triangle"
+            opacity: {
+                opacity: 1,
+                anim: {
+                    enable: false,
+                    speed: 1.5,
+                    opacity_min: 0,
+                    sync: false
+                }
+            },
+            size: 2.5,
+            size_random: true,
+            nb: 100,
+            line_linked: {
+                enable_auto: true,
+                distance: 140,
+                color: '#fff',
+                opacity: 1,
+                width: 1,
+                condensed_mode: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 600
+                }
+            },
+            anim: {
+                enable: true,
+                speed: 1
+            }
+        },
+        interactivity: {
+            enable: true,
+            mouse: {
+                distance: 250
+            },
+            detect_on: 'canvas', // "canvas" or "window"
+            mode: 'grab', // "grab" of false
+            line_linked: {
+                opacity: .5
+            },
+            events: {
+                onclick: {
+                    enable: true,
+                    mode: 'push', // "push" or "remove"
+                    nb: 4
+                },
+                onresize: {
+                    enable: true,
+                    mode: 'out', // "out" or "bounce"
+                    density_auto: false,
+                    density_area: 800 // nb_particles = particles.nb * (canvas width *  canvas height / 1000) / density_area
+                }
+            }
+        },
+        /* Retina Display Support */
+        retina_detect: true
+    });
+    </script>
+</body>
+
+</html>
